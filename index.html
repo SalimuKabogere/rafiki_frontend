@@ -13,6 +13,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homepage</title>
+  <link rel="stylesheet" href="css/styles.css">
   <style>
     .hero-section {
       display: flex;
@@ -86,7 +87,6 @@
       font-size: 1rem;
       color: #fff;
     }
-    
 
     .testimonial h5 {
       margin-top: 10px;
@@ -113,7 +113,7 @@
       opacity: 0;
       transition: opacity 0.6s ease-in-out;
     }
-    .testimonial:hover{
+    .testimonial:hover {
       background-color: green;
       color: #fff;
     }
@@ -121,7 +121,8 @@
     .scroll-fade.show {
       opacity: 1;
     }
-    .btn{
+
+    .btn {
       background-color: green;
       color: #ffff;
     }
@@ -133,7 +134,7 @@
   <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
     <nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="../images/logo.jpg" alt="Rafiki-Light" style="height: 50px;">
+        <img src="images/logo.jpg" alt="Rafiki-Light" style="height: 50px;">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -142,27 +143,27 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active me-3" aria-current="page" href="../index.html">Home</a>
+            <a class="nav-link active me-3" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active me-3" aria-current="page" href="../pages/about_us.html">About</a>
+            <a class="nav-link active me-3" aria-current="page" href="pages/about_us.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active me-3" aria-current="page" href="../pages/support.html">Support Us</a>
+            <a class="nav-link active me-3" aria-current="page" href="pages/support.html">Support Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active me-3" aria-current="page" href="../pages/contact.html">Contact Us</a>
+            <a class="nav-link active me-3" aria-current="page" href="pages/contact.html">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active me-3" aria-current="page" href="../pages/events.html">Events</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link active me-3" aria-current="page" href="../pages/team.html">Team</a>
+            <a class="nav-link active me-3" aria-current="page" href="pages/events.html">Events</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active me-3" aria-current="page" href="../pages/join.html">Join us</a>
+            <a class="nav-link active me-3" aria-current="page" href="pages/team.html">Team</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active me-3" aria-current="page" href="pages/join.html">Join us</a>
           </li>
         </ul>
         <form class="d-flex me-3" role="search">
@@ -171,7 +172,7 @@
         </form>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../auth/login.html">
+            <a class="nav-link active" aria-current="page" href="auth/login.html">
               <i class="fas fa-sign-in-alt me-1"></i> Login
             </a>
           </li>
@@ -188,12 +189,12 @@
           <h1>RAFIKI-LIGHT: Together We Create Hope</h1>
           <p>Empowering displaced individuals to rebuild their lives with dignity, resilience, and purpose.</p>
           <div class="hero-buttons">
-            <a href="../pages/donate.html" class="btn btn-primary">Donate Now</a>
-            <a href="../pages/involve.html" class="btn btn-outline-primary">Get Involved</a>
+            <a href="pages/donate.html" class="btn btn-primary">Donate Now</a>
+            <a href="pages/involve.html" class="btn btn-outline-primary">Get Involved</a>
           </div>
         </div>
         <div class="hero-image col-lg-6">
-          <img src="../images/bg2.jpg" alt="People Smiling">
+          <img src="images/bg2.jpg" alt="People Smiling">
         </div>
       </div>
     </div>
@@ -236,39 +237,19 @@
     <div class="container">
       <div class="section-title">
         <h2>Upcoming Events</h2>
-        <p>Join us at our upcoming events and make a difference.</p>
+        <p>Join us for our upcoming events and be a part of our journey.</p>
       </div>
       <div class="row">
+        <!-- Example Event -->
         <div class="col-md-4 scroll-fade">
-          <div class="card mb-3">
-            <img src="../images/comm5.jpg" class="card-img-top" alt="Event 1">
-            <div class="card-body">
-              <h5 class="card-title">Fundraising Gala</h5>
-              <p class="card-text">Join us for an evening of inspiration and support for our cause.</p>
-              <p class="card-text"><small class="text-muted">September 25, 2024</small></p>
-            </div>
+          <div class="event">
+            <h4>Charity Gala</h4>
+            <p>Date: March 25, 2024</p>
+            <p>Location: Grand Hall, City Center</p>
+            <p>Description: An evening of celebration and fundraising to support our initiatives. Join us for a night of entertainment, inspiration, and community spirit.</p>
           </div>
         </div>
-        <div class="col-md-4 scroll-fade">
-          <div class="card mb-3">
-            <img src="../images/comm4.jpg" class="card-img-top" alt="Event 2">
-            <div class="card-body">
-              <h5 class="card-title">Community Workshop</h5>
-              <p class="card-text">Learn how to support displaced individuals in your community.</p>
-              <p class="card-text"><small class="text-muted">October 10, 2024</small></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 scroll-fade">
-          <div class="card mb-3">
-            <img src="../images/comm1.jpg" class="card-img-top" alt="Event 3">
-            <div class="card-body">
-              <h5 class="card-title">Volunteer Meetup</h5>
-              <p class="card-text">Meet other volunteers and learn how you can get involved.</p>
-              <p class="card-text"><small class="text-muted">November 5, 2024</small></p>
-            </div>
-          </div>
-        </div>
+        <!-- Add more events as needed -->
       </div>
     </div>
   </section>
@@ -278,28 +259,27 @@
     <div class="container">
       <div class="section-title">
         <h2>Testimonials</h2>
-        <p>Hear from those we've helped and those who've helped us.</p>
+        <p>Hear from those who have been impacted by our work.</p>
       </div>
       <div class="row">
         <div class="col-md-4 scroll-fade">
           <div class="testimonial">
-            <p>"Rafiki-Light gave me the support I needed to start over. I'm now thriving and giving back to my
-              community."</p>
-            <h5>James Agaba</h5>
-            <p class="position">Former Beneficiary</p>
+            <p>"Rafiki-Light has given me a new lease on life. The support and resources have been invaluable in helping me rebuild my future."</p>
+            <h5>Jane Doe</h5>
+            <p class="position">Beneficiary</p>
           </div>
         </div>
         <div class="col-md-4 scroll-fade">
           <div class="testimonial">
-            <p>"Being a volunteer at Rafiki-Light has been one of the most rewarding experiences of my life."</p>
-            <h5>Salimu</h5>
+            <p>"Being involved with Rafiki-Light has been a life-changing experience. The impact we make together is truly inspiring."</p>
+            <h5>John Smith</h5>
             <p class="position">Volunteer</p>
           </div>
         </div>
         <div class="col-md-4 scroll-fade">
           <div class="testimonial">
-            <p>"The organization's dedication to helping displaced individuals is truly inspiring."</p>
-            <h5>Rafiki</h5>
+            <p>"I am proud to support Rafiki-Light. Their dedication to empowering individuals in need is making a real difference."</p>
+            <h5>Emily Johnson</h5>
             <p class="position">Donor</p>
           </div>
         </div>
@@ -307,101 +287,27 @@
     </div>
   </section>
 
-  <!-- Contact Us Section -->
-  <section class="contact-section section bg-light">
-    <div class="container">
-      <div class="section-title">
-
-        <h2>Contact Us</h2>
-        <p>Get in touch with us for more information or to get involved.</p>
-      </div>
-      <div class="row">
-        <div class="col-md-6 scroll-fade">
-          <h3>Contact Information</h3>
-          <p><i class="fas fa-map-marker-alt me-2"></i>Kampala International University, Western Campus</p>
-          <p><i class="fas fa-phone-alt me-2"></i>+256 770865396</p>
-          <p><i class="fas fa-envelope me-2"></i>rafikilight78@gmail.com</p>
-        </div>
-        <div class="col-md-6 scroll-fade">
-          <h3>Send Us a Message</h3>
-          <form>
-            <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer>
-    <div class="container text-center">
-      <p>&copy; 2024 Rafiki-Light. All rights reserved.</p>
-      <p>Follow us on:
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-      </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Contact Us</h5>
+          <p>Email: info@rafiki-light.org</p>
+          <p>Phone: +1-234-567-890</p>
+          <p>Address: 123 Charity Lane, Cityville, Country</p>
+        </div>
+        <div class="col-md-6">
+          <h5>Follow Us</h5>
+          <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    crossorigin="anonymous"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const scrollElements = document.querySelectorAll(".scroll-fade");
-      const elementInView = (el, dividend = 1) => {
-        const elementTop = el.getBoundingClientRect().top;
-        return (
-          elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
-        );
-      };
-      const displayScrollElement = (element) => {
-        element.classList.add("show");
-      };
-      const handleScrollAnimation = () => {
-        scrollElements.forEach((el) => {
-          if (elementInView(el, 1.25)) {
-            displayScrollElement(el);
-          }
-        });
-      };
-      window.addEventListener("scroll", () => {
-        handleScrollAnimation();
-      });
-    });
-
-   
-  </script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const loginNavItem = document.querySelector('.nav-link[href="../auth/login.html"]');
-
-    // Check if the user is logged in by checking the existence of a token
-    const token = localStorage.getItem('token');
-    
-    if (token) {
-      loginNavItem.innerHTML = '<i class="fas fa-user me-1"></i> Logged in';
-      loginNavItem.href = "#"; // Prevent navigation to the login page
-    }
-  });
-</script>
-
-
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9FDih9r78ZV4z0k3n4CllU4lU4hWv5r7xUro1Or7I4A0ry+qWZ1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-Oe28S1i4eTXQs+5K8oH03l9fh5DJ0gO9jwZB9F3ziOYwi4H0n6pLkUR4dSuM5aaO" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>
