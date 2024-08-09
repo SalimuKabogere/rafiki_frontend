@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    overflow: hidden; /* Ensures the body doesn't scroll */
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    height: calc(100vh - 60px); /* Adjust height based on header size */
+    overflow: auto; /* Enables both horizontal and vertical scrolling */
+    padding: 20px;
+    gap: 15px;
+}
+
+.event {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+    flex-shrink: 0;
+    width: 30%; /* Adjust width to display multiple events horizontally */
+    max-width: 400px;
+}
+
+.event img {
+    width: 100%;
+    height: auto;
+}
+
+.event-info {
+    padding: 15px;
+}
+
+.event-info h2 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.event-info p {
+    color: #555;
+}
+
+/* Custom scrollbar for better user experience */
+.events-container {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f7f7f7;
+}
+
+.events-container::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+.events-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.events-container::-webkit-scrollbar-track {
+    background-color: #f7f7f7;
+}

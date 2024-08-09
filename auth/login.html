@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="/css/auth.css">
 </head>
+
 <body>
     <div class="container">
         <div class="heading">
@@ -35,7 +37,7 @@
     </div>
 
     <script>
-        document.getElementById('login-form').addEventListener('submit', function(event) {
+        document.getElementById('login-form').addEventListener('submit', function (event) {
             event.preventDefault();
 
             const email = document.getElementById('email').value;
@@ -53,18 +55,23 @@
                     password: password,
                 }),
             })
-            .then(response => response.json())
-            .then(data => {
-                if (data.token) {
-                    console.log('Login successful', data);
-                    localStorage.setItem('token', data.token); // Store token
-                    window.location.href = '../pages/homepage.html'; // Redirect to dashboard or another page
-                } else {
-                    console.error('Login failed', data);
-                }
-            })
-            .catch(error => console.error('Error:', error));
+                .then(response => response.json())
+                .then(data => {
+                    if (data.token) {
+                        console.log('Login successful', data);
+                        localStorage.setItem('token', data.token);
+                        localStorage.setItem('isLoggedIn', 'true'); // Store login state
+                        alert("Login successful. Click OK to continue")
+                        window.location.href = '../index.html';
+                    } else {
+                        console.error('Login failed', data);
+                        alert("Login failed ", data)
+                    }
+                })
+                .catch(error => console.error('Error:', error));
         });
+
     </script>
 </body>
+
 </html>

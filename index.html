@@ -142,6 +142,9 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
+            <a class="nav-link active me-3" aria-current="page" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link active me-3" aria-current="page" href="../pages/about_us.html">About</a>
           </li>
           <li class="nav-item">
@@ -151,12 +154,13 @@
             <a class="nav-link active me-3" aria-current="page" href="../pages/contact.html">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active me-3" aria-current="page" href="#">Events</a>
+            <a class="nav-link active me-3" aria-current="page" href="../pages/events.html">Events</a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link active me-3" aria-current="page" href="../pages/team.html">Team</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link active me-3" aria-current="page" href="../pages/join.html">Join us</a>
           </li>
@@ -379,7 +383,25 @@
         handleScrollAnimation();
       });
     });
+
+   
   </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const loginNavItem = document.querySelector('.nav-link[href="../auth/login.html"]');
+
+    // Check if the user is logged in by checking the existence of a token
+    const token = localStorage.getItem('token');
+    
+    if (token) {
+      loginNavItem.innerHTML = '<i class="fas fa-user me-1"></i> Logged in';
+      loginNavItem.href = "#"; // Prevent navigation to the login page
+    }
+  });
+</script>
+
+
 </body>
 
 </html>
