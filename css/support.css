@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #0056b3;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/comm7.jpeg') no-repeat center center/cover;
+    padding: 100px 0;
+    color: white;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-section .lead {
+    font-size: 1.2rem;
+  }
+  
+  .hero-section .btn {
+    margin-top: 20px;
+  }
+  
+  /* Support Section */
+  .support-section {
+    background-color: #f9f9f9;
+  }
+  
+  .section-title h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .support-card {
+    border: none;
+    transition: transform 0.3s;
+  }
+  
+  .support-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .support-card .card-body {
+    padding: 40px 20px;
+  }
+  
+  /* Impact Stories Section */
+  .impact-section .impact-story {
+    margin-bottom: 30px;
+    font-style: italic;
+    color: #666;
+  }
+  
+  /* Call to Action Section */
+  .cta-section {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  .cta-section .btn {
+    margin: 5px;
+  }
+  
+  /* Footer Section */
+  .footer-section {
+    background-color: #333;
+    color: white;
+  }
+  
+  .footer-section p {
+    margin: 0;
+  }
+  

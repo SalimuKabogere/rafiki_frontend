@@ -1,0 +1,102 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: green;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    margin: 2rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    flex: 1;
+    min-width: 250px;
+}
+
+.cards :hover{
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+}
+
+form button {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.social-links a {
+    color: green;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.testimonial {
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+.feedback-and-image {
+    margin: 40px 0;
+}
+
+.feedback-and-image .col-md-6 {
+    padding: 20px;
+}
+
+.feedback-and-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}

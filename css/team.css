@@ -1,0 +1,83 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #333;
+}
+
+/* Quote Section */
+.quote-section {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+  margin-bottom: 40px;
+}
+
+.quote-section h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.quote-section p {
+  font-size: 1.25rem;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Team Section */
+.team-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.card {
+  margin-bottom: 100px;
+  transition: transform 0.3s;
+  
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  width: 180px; 
+  height: 180px; 
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-body {
+  margin-top: 20px;
+}
+
+
+
+.card-body .card-text:nth-of-type(1) {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px; 
+}
+
+.card-body h5 {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Adjust spacing for the additional card-text elements */
+.card-body .card-text:nth-of-type(2) {
+  margin-top: 15px; /* Adjust spacing above the description text */
+}
+
+/* Footer Section */
+.footer-section {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-section p {
+  margin: 0;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="\css\auth.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>RAFIKI-LIGHT: Together We Create Hope</h1>
+            <p>Empowering displaced individuals to rebuild their lives with dignity, resilience, and purpose.</p>
+        </div>
+        <div class="form-container">
+            <h2>Create Account</h2>
+            <form id="register-form" method="POST">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Enter Password" required>
+                <input type="password" name="password2" placeholder="Confirm Password" required>
+                <button type="submit">Create Account</button>
+                <p>Already have an account? <a href="../auth/login.html">Login here</a></p>
+            </form>
+        </div>
+        <div class="quotes-container">
+            <div class="quote">
+                <img src="..\images\comm1.jpg" alt="Person 1">
+                <p>"Be the change you want to see in the world."</p>
+            </div>
+            <div class="quote">
+                <img src="..\images\comm2.jpg" alt="Person 2">
+                <p>"Nothing can change on your desire be deserving."</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('register-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = {
+                username: formData.get('username'),
+                email: formData.get('email'),
+                password: formData.get('password'),
+                password2: formData.get('password2')
+            };
+    
+            // Check if passwords match
+            if (data.password !== data.password2) {
+                alert('Passwords do not match');
+                return;
+            }
+    
+            try {
+                const response = await fetch('http://127.0.0.1:8000/signup/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        username: data.username,
+                        email: data.email,
+                        password: data.password
+                    })
+                });
+    
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.detail || 'Signup failed');
+                }
+    
+                // If successful, redirect to the login page
+                window.location.href = '../auth/login.html';
+            } catch (error) {
+                console.error('Signup failed', error.message);
+            }
+        });
+    </script>
+</body>
+</html>

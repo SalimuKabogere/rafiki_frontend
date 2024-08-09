@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{% csrf_token %}">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/auth.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>RAFIKI-LIGHT: Together We Create Hope</h1>
+            <p>Empowering displaced individuals to rebuild their lives with dignity, resilience, and purpose.</p>
+        </div>
+        <div class="form-container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="../auth/register.html">Register</a></p>
+            </form>
+        </div>
+        <div class="quotes-container">
+            <div class="quote">
+                <img src="../images/comm1.jpg" alt="Person 1">
+                <p>"Be the change you want to see in the world."</p>
+            </div>
+            <div class="quote">
+                <img src="../images/comm2.jpg" alt="Person 2">
+                <p>"Nothing can change on your desire be deserving."</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+            fetch('http://127.0.0.1:8000/login/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken
+                },
+                body: JSON.stringify({
+                    username: email,
+                    password: password,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.token) {
+                    console.log('Login successful', data);
+                    localStorage.setItem('token', data.token); // Store token
+                    window.location.href = '../pages/homepage.html'; // Redirect to dashboard or another page
+                } else {
+                    console.error('Login failed', data);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

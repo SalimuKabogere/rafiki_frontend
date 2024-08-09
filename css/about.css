@@ -1,0 +1,82 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  .header {
+    background-color: white;
+    color: black;
+    padding: 10px 0;
+  }
+  .nav-item a{
+    color: #fff;
+  }
+  .header .navbar-brand img {
+    max-height: 50px;
+  }
+  
+  .hero-section {
+    background: url('../images/comm6.jpeg') no-repeat center center/cover;
+    color: white;
+    padding: 150px 0;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s;
+  }
+  
+  .hero-description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 2s;
+  }
+  
+  .about-us-section, .values-section, .our-team-section, .testimonials-section {
+    padding: 60px 0;
+  }
+  
+  .values-section .fa {
+    color: green;
+  }
+  
+  .footer-section {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      transform: translate3d(0, 40px, 0);
+      opacity: 0;
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+  
+  /* Additional animations using WOW.js */
+  .wow {
+    visibility: hidden;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .hero-description {
+      font-size: 1rem;
+    }
+  }
+  
